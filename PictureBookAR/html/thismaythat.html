@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>Test index page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script src="dropdownLayer.js" type="text/javascript"></script>
+    
+    
+    <style>
+      
+      
+* { box-sizing: border-box; }
+
+body {
+  background-color: #f0706f;
+  color: #fff;
+  margin: 0;
+  min-height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container { width: 100%; }
+
+.persons {
+  padding: 40px 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.persons:before,
+.persons:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.persons .person {
+  width: 25%;
+  margin-bottom: 20px;
+  display: table;
+  float: left;
+  border-left: 20px solid transparent;
+  cursor: pointer;
+}
+
+.persons .person .avatar {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.persons .person .avatar img {
+  border: 10px solid #fff;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.persons .person.active .avatar img { border-color: #fff; }
+
+.persons .person .fullname {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 0 5px;
+}
+
+.persons .person .title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+.persons .person .js-description { display: none; }
+@media screen and (max-width: 700px) {
+
+.persons .person { width: 50%; }
+}
+@media screen and (max-width: 400px) {
+
+.persons .person {
+  width: 100%;
+  border-left: medium none;
+}
+}
+
+.persons .js-dropdown {
+  background-clip: padding-box !important;
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  float: left;
+  padding: 0;
+  margin: 40px 0 20px;
+  width: 100%;
+  display: table;
+  border-color: transparent;
+  border-image: none;
+  border-style: solid;
+  border-width: 0 0 10px 20px;
+}
+
+.persons .js-dropdown:before,
+.persons .js-dropdown:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+@media screen and (max-width: 400px) {
+
+.persons .js-dropdown { border-left: medium none; }
+}
+
+.persons .js-dropdown .js-dropdown-content {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 3px solid #E5E5E5;
+  color: #333333;
+  position: relative;
+  width: 100%;
+  padding: 48px 32px 0;
+}
+
+.persons .js-dropdown .js-dropdown-content .js-dropdown-arrow {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -55px;
+  border: 30px solid transparent;
+  border-bottom-color: #E5E5E5;
+  pointer-events: none;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  transition: left 0.3s;
+}
+
+.persons .js-dropdown .js-dropdown-content p {
+  line-height: 26px;
+  margin: 0 0 40px;
+  padding: 0;
+  font-size: 16px;
+}
+      </style>
+    
+    
+  </head>
+  <body>
+   <br><br><br> 
+    <div class="container">
+      <div class="persons js-dropdown-items">
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g5.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Albert Neony</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g2.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Sarah Einstein</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g3.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Albert Leone</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g4.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Panda Jhonson</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+         
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g6.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Neo Carpin</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g8.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Thor Anderson</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g9.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Rebelion</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+        <div class="person js-dropdown-item">
+          <div class="avatar"><img src="g7.jpg" alt="" title="Albert Einstein"></div>
+          <div class="fullname">Jay Einstein</div>
+          <div class="title">Chairman</div>
+          <div class="js-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.js-dropdown-item').dropdownLayer({
+          'elemSelector': "js-dropdown-item",
+          'containerClass': "js-dropdown-items", 
+          'descriptionClass': "js-description",
+          'arrowClass': "js-dropdown-arrow",
+          'dropdownClass': "js-dropdown",
+          'dropdownContentClass': "js-dropdown-content",
+          'disableDropdownClass': "js-dropdown-disable",
+          'useSlideUp': true,
+          'slideUpSpeed': 200,
+          'useSlideDown': true,
+          'slideDownSpeed': 200,
+          'callOnCompleteHide': function(){ console.log('your custom function which will be called on complete after hiding'); },
+          'callOnCompleteShow': function(){ console.log('your custom function which will be called on complete after showing'); }
+        });
+      });
+    </script>
+  </body>
+</html>
